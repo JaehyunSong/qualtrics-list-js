@@ -4,8 +4,9 @@ Qualtricsでリスト実験（list experiment / item count technique）を実装
 ```js
 Qualtrics.SurveyEngine.addOnload(function()
 {
-   /*
-   統制項目と処置項目の配列
+   /* 
+      統制項目と処置項目の配列
+      
       1. 統制群の項目はcontrolArray内に入力
          - 各項目は""で囲み、カンマ（,）で区切る
       2. 処置群の項目をtreatArray内に入力
@@ -24,11 +25,7 @@ Qualtrics.SurveyEngine.addOnload(function()
    // 以下からは修正しなくても良い
    var group = Math.floor(Math.random() * (treatArray.length + 1));
 
-   if (group === 0) {
-     var ListArray = controlArray;
-   } else {
-     var ListArray = controlArray.concat(treatArray[group - 1]);
-   } 
+   if (group > 0) ListArray.push(treatArray[group - 1]);
 
    //console.log(ListArray) // デバッグ用
 
@@ -42,7 +39,7 @@ Qualtrics.SurveyEngine.addOnload(function()
    
    ListArray.forEach((value, index) => {
      Qualtrics.SurveyEngine.setEmbeddedData("List_" + (index + 1), value); // 本番用
-     //console.log(value) // デバッグ要
+     //console.log(value) // デバッグ用
    });
 
 });
