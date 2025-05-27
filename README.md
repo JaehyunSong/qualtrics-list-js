@@ -1,6 +1,8 @@
 # Item randomizer for Qualtrics
 
-Qualtricsでリスト実験（list experiment / item count technique）を実装する際、項目をランダム化する
+- Qualtricsでリスト実験（list experiment / item count technique）を実装する際、項目をランダム化するスクリプトです。
+- 宋が個人HPで公開した方法はphpスクリプトを利用する方法ですが、外部サーバーが必要でしたが、これはサーバー不要です。ただし、回答者の回答環境でJavaScriptが使える必要あります。
+   - なによりQualtricsの仕様変更により、完全にJSONファイルをエクスポートしない場合、Web Serviceが使えなくなってしまい、既存のphpスクリプトは使えなくなりました...。
 
 ## 使い方
 
