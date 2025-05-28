@@ -86,6 +86,10 @@ Qualtrics.SurveyEngine.addOnUnload(function()
 
 ![](figs/surveyflow.png)
 
+### 設問
+
+![](figs/questionnaire.png)
+
 ## サンプル
 
 - 以上のやり方でリスト実験を実装した質問票を作成しました。
