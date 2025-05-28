@@ -80,6 +80,12 @@ Qualtrics.SurveyEngine.addOnUnload(function()
    - `Group`の値が`1`なら処置群1、`2`なら処置群2のブロックを割り当てます。
       - JavaScriptの`treatArray`配列の中身の順番が処置群の番号となります。
 
+## 例
+
+### Survey Flow
+
+![](figs/surveyflow.png)
+
 ## サンプル
 
 - 以上のやり方でリスト実験を実装した質問票を作成しました。
